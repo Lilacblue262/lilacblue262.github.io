@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?	family=Noto+Serif+Makasar&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Noto Serif Makasar', serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="email1" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> My Email</a>
+		<a id="email2" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-v"></i> School Email</a>
+		<a id="calendar" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Calendar</a>
+		<a id="onelogin" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-1"></i> Vassar OneLogin</a>
+		<a id="Media" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bookmark"></i> Media</a>
+
+		
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Asiyah-Abbas-e65eb25c63484df2a2e343723dab4264").focus();
+			else if (id == "email1")
+				window.open("https://mail.google.com/mail/u/0/#inbox").focus();
+			else if (id == "email2")
+				window.open("https://mail.google.com/mail/u/4/#inbox").focus();
+			else if (id == "calendar")
+				window.open("https://calendar.google.com/calendar/u/0/r/month").focus();
+			
+			else if (id == "onelogin")
+				window.open("https://vassar.onelogin.com/portal").focus();
+			
+			else if (id == "Media")
+				window.open("https://www.notion.so/Media-53be697bc27a41ff98b2bbc40f073c56").focus();
+			
+		}
+	</script>
+
+
+</body>
+
+</html>
